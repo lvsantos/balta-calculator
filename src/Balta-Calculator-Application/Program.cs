@@ -8,14 +8,14 @@ Console.WriteLine();
 Console.WriteLine("Please, select an operation:");
 Console.WriteLine("1 - Add");
 Console.WriteLine("2 - Subtract");
-Console.WriteLine("3 - Multiply");
-Console.WriteLine("4 - Divide");
-Console.Write("Your option: ");
+Console.WriteLine("3 - Divide");
+Console.WriteLine("4 - Multiply");
 
 bool isValid = false;
 int option;
 do
 {
+    Console.Write("Your option: ");
     isValid = int.TryParse(Console.ReadLine(), out option);
 }while (!isValid);
 
@@ -44,11 +44,11 @@ switch (option)
     case 2:
         Console.WriteLine($"The subtraction of {num1} and {num2} is {Calculator.Subtract(num1, num2)}");
         break;
-    /*case 3:
-        Console.WriteLine($"The multiplication of {num1} and {num2} is {Calculator.Multiply(num1, num2)}");
-        break;
-    case 4:
+    case 3:
         Console.WriteLine($"The division of {num1} and {num2} is {Calculator.Divide(num1, num2)}");
+        break;
+    /*case 4:
+        Console.WriteLine($"The multiplication of {num1} and {num2} is {Calculator.Multiply(num1, num2)}");
         break;*/
     default:
         Console.WriteLine("Invalid option");

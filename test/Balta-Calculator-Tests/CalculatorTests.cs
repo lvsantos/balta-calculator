@@ -26,5 +26,16 @@ public class CalculatorTests
         // Assert
         Assert.Equal(subtraction, result);
     }
+    [Theory(DisplayName = "Must divide two numbers")]
+    [InlineData(6, 3, 2)]
+    [InlineData(2.5, 1.25, 2)]
+    public void Should_Divide_TwoNumbers(double number1, double number2, double division)
+    {
+        // Arrange & Act
+        double result = Calculator2.Divide(number1, number2);
+
+        // Assert
+        Assert.Equal(division, result);
+    }
 }
 
