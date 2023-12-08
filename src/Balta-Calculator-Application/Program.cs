@@ -47,9 +47,9 @@ switch (option)
     case 3:
         Console.WriteLine($"The division of {num1} and {num2} is {Calculator.Divide(num1, num2)}");
         break;
-    /*case 4:
+    case 4:
         Console.WriteLine($"The multiplication of {num1} and {num2} is {Calculator.Multiply(num1, num2)}");
-        break;*/
+        break;
     default:
         Console.WriteLine("Invalid option");
         break;

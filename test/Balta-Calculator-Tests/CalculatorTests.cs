@@ -37,5 +37,16 @@ public class CalculatorTests
         // Assert
         Assert.Equal(division, result);
     }
+    [Theory(DisplayName = "Must multiply two numbers")]
+    [InlineData(2, 3, 6)]
+    [InlineData(2.5, 1.5, 3.75)]
+    public void Should_Multiply_TwoNumbers(double number1, double number2, double multiplication)
+    {
+        // Arrange & Act
+        double result = Calculator2.Multiply(number1, number2);
+
+        // Assert
+        Assert.Equal(multiplication, result);
+    }
 }
 
