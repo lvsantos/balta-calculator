@@ -15,5 +15,16 @@ public class CalculatorTests
         // Assert
         Assert.Equal(sum, result);
     }
+    [Theory(DisplayName = "Must subtract two numbers")]
+    [InlineData(5, 3, 2)]
+    [InlineData(2.5, 1.5, 1)]
+    public void Should_Subtract_TwoNumbers(double number1, double number2, double subtraction)
+    {
+        // Arrange & Act
+        double result = Calculator2.Subtract(number1, number2);
+
+        // Assert
+        Assert.Equal(subtraction, result);
+    }
 }
 
